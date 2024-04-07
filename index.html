@@ -11,6 +11,29 @@
     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
   <title>Dictionary App</title>
+<style>
+  /* Spinner styles */
+  .spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #3498db; /* Change color as desired */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto; /* Adjust margin as needed */
+    display: none; /* Initially hidden */
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  .error-boundary{
+    display:none;
+    font-size:2rem;
+  }
+
+</style>
 </head>
 
 <body>
@@ -23,31 +46,16 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <li class="nav-item ">
+          <a class="nav-link" href="https://github.com/SaiG-2004">GitHub</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="https://www.linkedin.com/in/sai-gayatri-khuntia-b182542a4/">Linkedin</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
+        <li class="nav-item ">
+          <a class="nav-link" href="https://twitter.com/SaiGayatri444">Twitter </a>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
     </div>
   </nav>
   <div class="container my-4">
@@ -62,17 +70,19 @@
       <button type="submit" class="btn btn-primary" id="search-btn">Submit</button>
     </div>
   </div>
-
+       
 
   <div class="result" style="display: flex; flex-direction: column; align-items: center; justify-content: center; ">
   </div>
  
 
 
+  <div class="spinner"></div>
 
-
-
-
+<div class="error-boundary">
+<div class="alert alert-warning d-flex align-items-center justify-content-center " role="alert">
+  Word Not Found!
+</div></div>
 
 
   <!-- Optional JavaScript; choose one of the two! -->
